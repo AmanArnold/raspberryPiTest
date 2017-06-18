@@ -1,3 +1,18 @@
+import ctypes
+from ctypes import wintypes
+import time
+
+user32 = ctypes.WinDLL('user32', use_last_error=True)
+
+INPUT_MOUSE    = 0
+INPUT_KEYBOARD = 1
+INPUT_HARDWARE = 2
+
+KEYEVENTF_EXTENDEDKEY = 0x0001
+KEYEVENTF_KEYUP       = 0x0002
+KEYEVENTF_UNICODE     = 0x0004
+KEYEVENTF_SCANCODE    = 0x0008
+
 MAPVK_VK_TO_VSC = 0
 
 # msdn.microsoft.com/en-us/library/dd375731
